@@ -16,15 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currency Converter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jg-Qg-u8O">
-                                <rect key="frame" x="58" y="94" width="277" height="81"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="81" id="1mg-7v-7hV"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4E-bV-v94">
                                 <rect key="frame" x="53" y="239" width="205" height="60"/>
                                 <constraints>
@@ -43,43 +34,30 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b27-kQ-B1H">
-                                <rect key="frame" x="53" y="307" width="205" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="tHb-Fz-GUS"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oO6-lc-9b2">
-                                <rect key="frame" x="266" y="307" width="73" height="60"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ecb-nP-GnD">
                                 <rect key="frame" x="0.0" y="609" width="393" height="162"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="162" id="7Rn-J4-zXJ"/>
                                 </constraints>
                             </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="EUR Currency Converter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jg-Qg-u8O">
+                                <rect key="frame" x="29" y="92" width="335" height="81"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="81" id="1mg-7v-7hV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="b27-kQ-B1H" firstAttribute="top" secondItem="h4E-bV-v94" secondAttribute="bottom" constant="8" id="4lF-bn-PtA"/>
-                            <constraint firstItem="h4E-bV-v94" firstAttribute="leading" secondItem="b27-kQ-B1H" secondAttribute="leading" id="6bu-4e-3NG"/>
                             <constraint firstItem="h4E-bV-v94" firstAttribute="top" secondItem="6jg-Qg-u8O" secondAttribute="bottom" constant="64" id="BKz-Id-y6W"/>
-                            <constraint firstItem="Quk-Mq-fxn" firstAttribute="trailing" secondItem="oO6-lc-9b2" secondAttribute="trailing" id="IGB-sv-Jk4"/>
                             <constraint firstItem="h4E-bV-v94" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="53" id="ItR-uZ-mof"/>
-                            <constraint firstItem="b27-kQ-B1H" firstAttribute="firstBaseline" secondItem="oO6-lc-9b2" secondAttribute="firstBaseline" id="Oyw-pC-5jL"/>
-                            <constraint firstItem="h4E-bV-v94" firstAttribute="trailing" secondItem="b27-kQ-B1H" secondAttribute="trailing" id="SVp-4f-cOp"/>
                             <constraint firstItem="6jg-Qg-u8O" firstAttribute="centerX" secondItem="ecb-nP-GnD" secondAttribute="centerX" id="Uh0-fg-z44"/>
-                            <constraint firstItem="b27-kQ-B1H" firstAttribute="baseline" secondItem="oO6-lc-9b2" secondAttribute="baseline" id="Wlc-Fl-T5X"/>
                             <constraint firstItem="ecb-nP-GnD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XSC-3T-la3"/>
                             <constraint firstItem="h4E-bV-v94" firstAttribute="baseline" secondItem="Quk-Mq-fxn" secondAttribute="baseline" id="Yh4-mU-7zo"/>
-                            <constraint firstItem="Quk-Mq-fxn" firstAttribute="leading" secondItem="oO6-lc-9b2" secondAttribute="leading" id="aO2-h7-nyZ"/>
                             <constraint firstItem="6jg-Qg-u8O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cle-MS-Aut"/>
                             <constraint firstItem="Quk-Mq-fxn" firstAttribute="leading" secondItem="h4E-bV-v94" secondAttribute="trailing" constant="8" id="cqi-gK-Hdn"/>
                             <constraint firstItem="6jg-Qg-u8O" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="hYp-65-16O"/>
@@ -91,9 +69,7 @@
                     </view>
                     <connections>
                         <outlet property="currencyNameOne" destination="Quk-Mq-fxn" id="i2h-LD-msw"/>
-                        <outlet property="currencyNameTwo" destination="oO6-lc-9b2" id="2GA-kc-jNG"/>
                         <outlet property="currencyNumOne" destination="h4E-bV-v94" id="8rX-DS-PcK"/>
-                        <outlet property="currencyNumTwo" destination="b27-kQ-B1H" id="aeg-PL-Ypl"/>
                         <outlet property="currencyPicker" destination="ecb-nP-GnD" id="PTI-dd-LI1"/>
                     </connections>
                 </viewController>
