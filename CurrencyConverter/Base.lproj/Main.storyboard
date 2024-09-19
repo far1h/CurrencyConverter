@@ -16,36 +16,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4E-bV-v94">
-                                <rect key="frame" x="53" y="239" width="205" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="4S3-44-1Sc"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Quk-Mq-fxn">
-                                <rect key="frame" x="266" y="239" width="73" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="73" id="nHh-jS-i7m"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ecb-nP-GnD">
                                 <rect key="frame" x="0.0" y="609" width="393" height="162"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="162" id="7Rn-J4-zXJ"/>
+                                    <constraint firstAttribute="height" constant="162" id="SNt-aZ-cyT"/>
                                 </constraints>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="EUR Currency Converter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jg-Qg-u8O">
-                                <rect key="frame" x="29" y="92" width="335" height="81"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EUR Currency Converter" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jg-Qg-u8O">
+                                <rect key="frame" x="29" y="59" width="335" height="152"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="81" id="1mg-7v-7hV"/>
+                                    <constraint firstAttribute="height" constant="152" id="NyS-SV-tUZ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4E-bV-v94">
+                                <rect key="frame" x="94" y="293" width="205" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="2rv-qs-sxQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Quk-Mq-fxn">
+                                <rect key="frame" x="159" y="388" width="73" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Rc7-vf-ylv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -53,23 +53,23 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="h4E-bV-v94" firstAttribute="top" secondItem="6jg-Qg-u8O" secondAttribute="bottom" constant="64" id="BKz-Id-y6W"/>
-                            <constraint firstItem="h4E-bV-v94" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="53" id="ItR-uZ-mof"/>
-                            <constraint firstItem="6jg-Qg-u8O" firstAttribute="centerX" secondItem="ecb-nP-GnD" secondAttribute="centerX" id="Uh0-fg-z44"/>
-                            <constraint firstItem="ecb-nP-GnD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XSC-3T-la3"/>
-                            <constraint firstItem="h4E-bV-v94" firstAttribute="baseline" secondItem="Quk-Mq-fxn" secondAttribute="baseline" id="Yh4-mU-7zo"/>
-                            <constraint firstItem="6jg-Qg-u8O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cle-MS-Aut"/>
-                            <constraint firstItem="Quk-Mq-fxn" firstAttribute="leading" secondItem="h4E-bV-v94" secondAttribute="trailing" constant="8" id="cqi-gK-Hdn"/>
-                            <constraint firstItem="6jg-Qg-u8O" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="hYp-65-16O"/>
-                            <constraint firstItem="6jg-Qg-u8O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="58" id="hlg-iV-wna"/>
-                            <constraint firstItem="h4E-bV-v94" firstAttribute="firstBaseline" secondItem="Quk-Mq-fxn" secondAttribute="firstBaseline" id="iBO-yP-wcE"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Quk-Mq-fxn" secondAttribute="trailing" constant="54" id="neT-ex-SQY"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ecb-nP-GnD" secondAttribute="bottom" constant="47" id="rpU-jC-F0u"/>
+                            <constraint firstItem="Quk-Mq-fxn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="159" id="1JM-wY-3RP"/>
+                            <constraint firstItem="6jg-Qg-u8O" firstAttribute="centerX" secondItem="h4E-bV-v94" secondAttribute="centerX" id="5iH-Ik-HLw"/>
+                            <constraint firstItem="h4E-bV-v94" firstAttribute="centerX" secondItem="ecb-nP-GnD" secondAttribute="centerX" id="HuE-TP-Ac0"/>
+                            <constraint firstItem="Quk-Mq-fxn" firstAttribute="top" secondItem="h4E-bV-v94" secondAttribute="bottom" constant="35" id="VXe-hm-LTI"/>
+                            <constraint firstItem="6jg-Qg-u8O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="29" id="YIV-2t-jeb"/>
+                            <constraint firstItem="6jg-Qg-u8O" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ahO-qG-n3N"/>
+                            <constraint firstItem="6jg-Qg-u8O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dDA-9D-BMo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Quk-Mq-fxn" secondAttribute="trailing" constant="161" id="dMm-3A-Nae"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ecb-nP-GnD" secondAttribute="bottom" constant="47" id="efB-Az-oXL"/>
+                            <constraint firstItem="ecb-nP-GnD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="p6L-e5-iz7"/>
+                            <constraint firstItem="h4E-bV-v94" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="94" id="v9K-2K-fSS"/>
+                            <constraint firstItem="h4E-bV-v94" firstAttribute="top" secondItem="6jg-Qg-u8O" secondAttribute="bottom" constant="82" id="x1M-tG-bHW"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="currencyNameOne" destination="Quk-Mq-fxn" id="i2h-LD-msw"/>
-                        <outlet property="currencyNumOne" destination="h4E-bV-v94" id="8rX-DS-PcK"/>
+                        <outlet property="currencyName" destination="Quk-Mq-fxn" id="i2h-LD-msw"/>
+                        <outlet property="currencyNum" destination="h4E-bV-v94" id="8rX-DS-PcK"/>
                         <outlet property="currencyPicker" destination="ecb-nP-GnD" id="PTI-dd-LI1"/>
                     </connections>
                 </viewController>

@@ -8,10 +8,13 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    @IBOutlet weak var currencyNameOne: UILabel!
-    @IBOutlet weak var currencyNumOne: UILabel!
+    @IBOutlet weak var currencyName: UILabel!
+    @IBOutlet weak var currencyNum: UILabel!
     @IBOutlet weak var currencyPicker: UIPickerView!
+    
+    var currencies = [String : Double]()
+    var currencyKeys = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         currencyPicker.dataSource=self
@@ -39,10 +42,16 @@ class ViewController: UIViewController {
 //                2)
                 if data != nil {
                     do {
-                        let jsonResponse = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers)
+                        let jsonResponse = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as! Dictionary<String, Any>
                         DispatchQueue.main.async {
-                            print(jsonResponse)
+                            if let rates = jsonResponse["rates"] as? [String: Double] {
+                                // Get all currency codes and sort them alphabetically
+                                self.currencies = rates
+                                self.currencyKeys = Array(rates.keys).sorted() // Sort the currency keys
+                                self.currencyPicker.reloadAllComponents() // Reload picker with new data
+                            }
                         }
+                        
                     } catch {
                         print("error")
                     }
@@ -51,24 +60,35 @@ class ViewController: UIViewController {
         }
         task.resume()
     }
-
-
+    
+    
 }
 
-extension ViewController: UIPickerViewDataSource{
+// MARK: - UIPickerView DataSource and Delegate
+extension ViewController: UIPickerViewDataSource, UIPickerViewDelegate {
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
+        return 1 // Single column
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 1
+        return currencies.count // Number of currencies
     }
     
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return currencyKeys[row] // Display currency codes
+    }
     
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        let selectedCurrency = currencyKeys[row] // Get the selected currency code
+        let currencyRate = currencies[selectedCurrency]! // Get the corresponding rate
+        
+        // Update the labels with the selected currency code and its rate
+        DispatchQueue.main.async {
+            self.currencyName.text = selectedCurrency
+            self.currencyNum.text = String(format: "%.4f", currencyRate) // Format the rate with 4 decimal places
+        }
+        
+    }
 }
-
-extension ViewController: UIPickerViewDelegate{
-    
-}
-
 
