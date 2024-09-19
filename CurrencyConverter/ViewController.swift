@@ -16,6 +16,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         currencyPicker.dataSource=self
         currencyPicker.delegate=self
+        getRates()
     }
     
     func getRates(){
@@ -37,10 +38,18 @@ class ViewController: UIViewController {
             } else {
 //                2)
                 if data != nil {
-                    
+                    do {
+                        let jsonResponse = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers)
+                        DispatchQueue.main.async {
+                            print(jsonResponse)
+                        }
+                    } catch {
+                        print("error")
+                    }
                 }
             }
         }
+        task.resume()
     }
 
 
@@ -52,7 +61,7 @@ extension ViewController: UIPickerViewDataSource{
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        <#code#>
+        return 1
     }
     
     
